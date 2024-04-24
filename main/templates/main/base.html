@@ -59,7 +59,7 @@
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Cart</a></li>
                                 <li><a class="dropdown-item  text-white" href="users/profile.html">Personal Area</a>
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Admin panel</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Admin panel</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -88,13 +88,9 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">All goods</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Jackets and windbreakers</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">T-shirts</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Shorts</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Sneakers</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Pants</a></li>
-                        <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">Accessories</a></li>
+                        {% for category in categories %}
+                            <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">{{ category.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- Trash icon, opens a modal window -->

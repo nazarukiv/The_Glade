@@ -40,283 +40,31 @@
                                 <button type="submit" class="btn btn-primary mx-3 mt-3">Apply</button>
                             </form>
                         </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/supreme_logo.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="../goods/product.html">
-                                        <p class="card-title">Supreme Logo T-shirt</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00%</span>
-                                        <!-- <p><strong>$100.00</strong></p> -->
-                                        <a href="#" class="btn add-to-cart">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
+                        {% for product in goods %}
+                            <!-- Product map -->
+                            <div class="col-lg-4 col-md-6 p-4">
+                                <div class="card border-primary rounded custom-shadow">
+                                    <img src="{% static product.image %}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <a href="../goods/product.html">
+                                            <p class="card-title">{{ product.name }}</p>
                                         </a>
+                                        <p class="card-text text-truncate">{{ product.description }}</p>
+                                        <p class="product_id">id: 02265</p>
+                                        <div class="d-flex justify-content-between">
+<!--                                            <p><s>100</s> $</p>-->
+<!--                                            <p><strong>90.00 $</strong></p>-->
+<!--                                            <span class="badge bg-warning text-dark">Discount 10.00%</span>-->
+                                            <p><strong>{{ product.price }} £</strong></p>
+                                            <a href="#" class="btn add-to-cart">
+                                                <img class="mx-1" src="{% static "deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
+                                                     width="32" height="32">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/off.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Big Bookish Skate Tee Off-White</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Part of Wardrobe, the curated selection of Off-White™ staples, this crewneck t-shirt features oversized branding and has a relaxed skate fit. 100% cotton.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00%</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn add-to-cart">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/jacket_carhartt.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Carhartt Jacket</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of jacket</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/patagonia_bag.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Patagonia Bag</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of bag</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/tracksuit.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Tracksuit Corteiz</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of tracksuit</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/bape_t_shirt.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">T-shirt Bape</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of t-shirt</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/nike_ring.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Nike Ring</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of ring</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/stussy_t_shirt.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">T-shirt Stussy</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of t-shirt</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/essential_hoodie.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Hoodie Fear of God , Essential</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of hoodie</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/windbreaker_corteiz.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Corteiz Windbreaker</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of windbreaker</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product map -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/adidas_samba.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Adidas Samba Sneakers</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of sneakers</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../../app/static/deps/images/goods/new_balance_shoese.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">New Balance Sneakers</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Description of sneakers</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../../app/static/deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                 width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        {% endfor %}
                     </div>
                     <!-- Pagination -->
                     <nav aria-label="Page navigation example">
@@ -342,7 +90,7 @@
 {% block footer %}
 <footer class="py-4 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Home Python Nazaruk Ivan 2024</p>
         </div>
     </footer>
 {% endblock %}

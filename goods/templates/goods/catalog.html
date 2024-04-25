@@ -76,20 +76,45 @@
                     </div>
                     <!-- Pagination -->
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center my-4">
-                            <div class="custom-shadow d-flex">
-                                <li class="page-item disabled">
-                                  <a class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">Next</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </nav>
+  <ul class="pagination justify-content-center my-4">
+    <div class="custom-shadow d-flex">
+      <!-- Previous Page Link -->
+      <li class="page-item {% if not goods.has_previous %}disabled{% endif %}">
+        <a class="page-link" href="{% if goods.has_previous %}{% url 'catalog:index' slug_url goods.previous_page_number %}{% else %}#{% endif %}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+
+      <!-- Show previous page number if not on first page -->
+      {% if goods.number > 1 %}
+        <li class="page-item">
+          <a class="page-link" href="{% url 'catalog:index' slug_url goods.previous_page_number %}">{{ goods.previous_page_number }}</a>
+        </li>
+      {% endif %}
+
+      <!-- Current Page Number -->
+      <li class="page-item active">
+        <span class="page-link">{{ goods.number }}</span>
+      </li>
+
+      <!-- Show next page number if not on last page -->
+      {% if goods.number < goods.paginator.num_pages %}
+        <li class="page-item">
+          <a class="page-link" href="{% url 'catalog:index' slug_url goods.next_page_number %}">{{ goods.next_page_number }}</a>
+        </li>
+      {% endif %}
+
+      <!-- Next Page Link -->
+      <li class="page-item {% if not goods.has_next %}disabled{% endif %}">
+        <a class="page-link" href="{% if goods.has_next %}{% url 'catalog:index' slug_url goods.next_page_number %}{% else %}#{% endif %}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+
 {% endblock %}
 
 

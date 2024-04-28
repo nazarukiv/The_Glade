@@ -68,10 +68,11 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex" role="search" action="{% url 'catalog:search' %}" method="get">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{ request.GET.q }}">
                         <button class="btn btn-outline-success text-white" type="submit">Search</button>
                     </form>
+
                 </div>
             </div>
         </nav>

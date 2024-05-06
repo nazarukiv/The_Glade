@@ -21,6 +21,8 @@ def login(request):
             if user:
                 auth_login(request, user)
                 messages.success(request, f"{user.username}, You are logged in")
+                if request.POST.get('next', None):
+                    return HttpResponseRedirect(request.POST.get('next'))
                 return HttpResponseRedirect(reverse('main:index'))
             else:
                 form.add_error(None, "Invalid username or password")

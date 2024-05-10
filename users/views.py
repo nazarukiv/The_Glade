@@ -77,7 +77,9 @@ def profile(request):
 def users_cart(request):
     return render(request, 'users/users_cart.html')
 
+
 def logout(request):
     messages.success(request, f"{request.user.username}, You are logged out of your account")
     auth.logout(request)
     return redirect(reverse('main:index'))
+

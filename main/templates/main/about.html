@@ -6,6 +6,23 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+<style>
+    .jumbotron {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 2rem 2rem;
+        margin-bottom: 2rem;
+    }
+    .content-section {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+    }
+    .card {
+        margin-top: 1rem;
+    }
+    .content-container {
+        padding-bottom: 5rem;
+    }
+</style>
 {% endblock %}
 
 {% block modal_cart %}
@@ -13,16 +30,60 @@
 {% endblock %}
 
 {% block content %}
-    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
-        <h2 class="m-2"><strong>{{ content }}</strong></h2>
-        <p class="m-2">{{ text_on_page }}🌐</p>
+<div class="container mt-5 pt-5 content-container">
+    <div class="jumbotron text-center custom-shadow rounded">
+        <h1 class="display-4">{{ content }}</h1>
+        <p class="lead">{{ title }}</p>
     </div>
+
+    <div class="row content-section rounded">
+        <div class="col-md-6">
+            <h2>Welcome to The Glade</h2>
+            <p class="text-justify">
+                Welcome to The Glade, where style meets urban culture. We present you a unique assortment of clothing and other items that reflect the spirit of the modern city resident by carefully selecting the newest styles with past classics.
+            </p>
+            <p class="text-justify">
+                From streetwear staples to high-end fashion, our collection embodies the vibrant energy and diversity of urban life. Step into our emporium and discover a world of fashion-forward designs, quality craftsmanship, and effortless cool. Join the Urban Era movement today.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'deps/images/y2k.jpeg' %}" class="img-fluid rounded" alt="About Us Image">
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">To become the leading retailer of urban fashion, known for our innovative designs and commitment to quality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Our Mission</h5>
+                    <p class="card-text">To provide customers with the latest fashion trends and timeless classics that reflect the spirit of urban life.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Our Values</h5>
+                    <p class="card-text">Innovation, quality, and customer satisfaction are at the heart of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}
 <footer class="py-4 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Home Python Nazaruk Ivan 2024</p>
-        </div>
-    </footer>
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Home Python Nazaruk Ivan 2024</p>
+    </div>
+</footer>
 {% endblock %}

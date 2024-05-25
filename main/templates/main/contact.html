@@ -6,19 +6,58 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+<style>
+    .content-section {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+    }
+    .content-container {
+        padding-bottom: 5rem;
+    }
+    .map-container {
+        margin-top: 2rem;
+    }
+</style>
+{% endblock %}
+
+{% block modal_cart %}
+    {% include "includes/cart_button.html" %}
 {% endblock %}
 
 {% block content %}
-    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
-        <h2 class="m-2"><strong>{{ content }}</strong></h2>
-        <p class="m-2">{{ text_on_page|linebreaks }}</p>
+<div class="container mt-5 pt-5 content-container">
+    <div class="jumbotron text-center custom-shadow rounded">
+        <h1 class="display-4">{{ content }}</h1>
+        <p class="lead">{{ title }}</p>
     </div>
+
+    <div class="row content-section rounded">
+        <div class="col-md-6">
+            <h2>Contact Information</h2>
+            <p class="text-justify">
+                Email 1: nazaruk7649@ukr.net
+            </p>
+            <p class="text-justify">
+                Email 2: ivan001nazaruk@gmail.com
+            </p>
+            <p class="text-justify">
+                Address: West London
+            </p>
+            <p class="text-justify">
+                Feel free to reach out for any information or inquiries.
+            </p>
+        </div>
+        <div class="col-md-6 map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.1151511350085!2d-0.30452312625015093!3d51.51267270082966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760df508295837%3A0x11c2ae89ae760bbb!2sEaling%20Broadway!5e0!3m2!1sen!2suk!4v1716670298629!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}
 <footer class="py-4 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Home Python Nazaruk Ivan 2024</p>
-        </div>
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Home Python Nazaruk Ivan 2024</p>
+    </div>
 </footer>
 {% endblock %}

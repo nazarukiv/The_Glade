@@ -14,7 +14,7 @@ def index(request):
 
 def about(request):
     context = {
-        'title': 'Home - About Us Page',
+        'title': 'About Us Page',
         'content': 'The Glade',
         'text_on_page': "Welcome to The Glade, where style meets urban culture. We curate the latest trends and timeless classics to bring you a unique selection of clothing and accessories that reflect the spirit of the modern city dweller. From streetwear staples to high-end fashion, our collection embodies the vibrant energy and diversity of urban life. Step into our emporium and discover a world of fashion-forward designs, quality craftsmanship, and effortless cool. Join the Urban Era movement today."
     }
@@ -23,7 +23,7 @@ def about(request):
 
 def contact(request):
     context = {
-        'title': 'Home - Contact Us Page',
+        'title': 'Contact Us Page',
         'content': 'Contact The Glade',
         'text_on_page': (
             "Contact Information:\n"
@@ -41,7 +41,7 @@ def contact(request):
 
 def ship_payment(request):
     context = {
-        'title': 'Home - Shipping and Payment Information',
+        'title': 'Shipping and Payment Information',
         'content': 'The Glade',
         'text_on_page': (
             "Shipping and Payment Information:\n"
